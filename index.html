@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+    <title>netflix| landing page UI </title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="./logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div  class="banner">
+        <img src="./bg.jpg "  class="bg"> 
+        <div class="content ">
+            <img src="./name.png" class="movieTitle"> 
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum molestias consectetur corporis laboriosam voluptatibus reiciendis atque eum iusto. Aperiam molestias dolore aliquam. Adipisci fuga, minus non possimus vero nostrum! Mollitia.</P>
+
+            <div class="buttons">
+                <a href="#" <i class="fa fa-play" aria-hidden="true"></i>>Play</a>
+                <a href="#" <i class="fa fa-plus" aria-hidden="true"></i>>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="togglevideo();"><img src="./play.png">watch trailer</a>
+    </div>
+<div class="trailer">
+    <video src="videoplayback.mp4" controls="true" autoplay="true"></video>
+    <img src="close.png" class="close" onclick="togglevideo();">
+</div>
+
+<script>
+    function togglevideo(){
+        const trailer = document.querySelector('.trailer');
+        const video = document.querySelector('video');
+
+        trailer.classList.toggle('active');  
+        video.currentTime=0;
+        video.pause();
+    }
+</script>
+</body>
+</html>
